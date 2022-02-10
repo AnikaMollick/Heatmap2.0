@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+  font-size: medium;
+  height: 100%;
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.heatmap{
+ 
+  position: fixed;
+}
+.heatmap-canvas 
+{
+  margin-left: -300px;
+  margin-top:-230px ;
+  justify-content: center;
+  background-image: url('./Heatmap/fooballField.jpg'); 
+  height: 800px;
+  background-repeat: no-repeat; 
+  background-size: 920px 520px;
+  border: 100px;
+  border-color: black;
+  position: fixed;
+}
+.Button
+{
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+  height: 40px;
+  width: 200px;
+}
+.Button p{
+  cursor: pointer;
+  margin-top: 100;
+  color:black;
+  margin-top: px;
+}
+.Button p :active{
+  cursor: pointer;
+  margin-top: 100;
+  color:white;
+  margin-top: px;
+  margin-left: 150px;
+}
+ .Button :hover{
+ background-color: #282c34;
+ color:#ffffff
+}
+.clearfix {
+  clear:both;
+  display: inline-block;
+}
+.list {
+  height: 15vw ;
+  display: list;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  margin-left: -600px;
+  margin-top: 70px; 
+}
+.playButton{
+  margin-top: 290px;
+  position: fixed;
+  height: 30px;
+  width: 50px;
+  align-items: center;
+  background-color: #ffffff;
+
+}
