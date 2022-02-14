@@ -8,11 +8,6 @@ import events from '../Events.json'
 const HeatmapProps = ({name,timestamp,onClick}) => {
   let [filter,setFiletr]=useState()
 const history = useHistory ()
-let [active, setActive] = useState(name[0]);
-const handleToggle= ()=>{
-active=setActive({name})
-console.log(active)
-}
    useEffect(() => {
       return history.listen((location) => { 
      filter=setFiletr(`${location.pathname}`)
@@ -24,7 +19,6 @@ console.log(active)
       var hour = Math.floor(eventTime);
     var decpart = eventTime - hour;
     var min = 1 / 60;
-    var Seconds= 1/ 3600
     decpart = min * Math.round(decpart / min);
     var minute = Math.floor(decpart * 60) + '';
     // Concate hours and minutes
@@ -46,10 +40,10 @@ console.log(active)
     return (
         <div className='Button'>
        
-           {/* <ButtonToggle active={active === name} onClick = {() => {setActive(name); const newData = filterData(playerPositions, filter ==="/Home"? Fullheatmap:filter ==="/Ball"? ballEventFilter:filter ==="/TeamA"? TeamAFilter:TeamBFilter )
+        {/* <ButtonToggle active={active === name} onClick = {() => {setActive(name); const newData = filterData(playerPositions, filter ==="/Home"? Fullheatmap:filter ==="/Ball"? ballEventFilter:filter ==="/TeamA"? TeamAFilter:TeamBFilter )
           onClick(newData)} } >{name}</ButtonToggle> */}
-            <p className='active' 
-           onClick = {() => { handleToggle(); const newData = filterData(playerPositions, filter ==="/Home"? Fullheatmap:filter ==="/Ball"? ballEventFilter:filter ==="/TeamA"? TeamAFilter:TeamBFilter )
+            <p className= "current"
+           onClick = {() => {  const newData = filterData(playerPositions, filter ==="/Home"? Fullheatmap:filter ==="/Ball"? ballEventFilter:filter ==="/TeamA"? TeamAFilter:TeamBFilter )
           onClick(newData)}} >{name}</p>
         
               <p>{time}</p>

@@ -27,7 +27,7 @@
  ul li a :active{
   text-decoration:none;
   color:black;
-  background-color: #282c34;
+  background-color: black;
 } 
      
  .logo 
@@ -45,14 +45,14 @@
     }
     .navbar_link:hover {
         transform: translateY(1px);
-       background-color: #282c34;
+       background-color: rgb(17, 17, 17);
+       opacity: 0.5;
      color: white;
       }
      
       
         .navbar_link-active{
-        background-color: rgb(43, 46, 45);
-        opacity: 0.5;
+        background-color: black;
         color: white;
         font-weight:bold;
      } 

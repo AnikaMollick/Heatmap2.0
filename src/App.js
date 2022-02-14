@@ -4,12 +4,13 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import HeatmapExtract from './Heatmap/Heatmap2.0/HeatmapExtract';
 import Navbar from './Heatmap/navbar';
 import  Animation  from './Heatmap/Heatmap2.0/Animation';
+import LoadingScreen from './Heatmap/Heatmap2.0/AnimationTrail';
 
 function App() {
   return (
     <div className="App" >
        <Router>
-      <Navbar/> 
+      <Navbar/>
     <Switch>
      <Route path ="/Home" exact component ={HeatmapExtract}/> 
      <Route path ="/Ball" exact component ={HeatmapExtract}/> 
