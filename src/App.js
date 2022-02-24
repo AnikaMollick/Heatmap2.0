@@ -3,8 +3,6 @@ import './App.scss';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import HeatmapExtract from './Heatmap/Heatmap2.0/HeatmapExtract';
 import Navbar from './Heatmap/navbar';
-import  Animation  from './Heatmap/Heatmap2.0/Animation';
-import LoadingScreen from './Heatmap/Heatmap2.0/AnimationTrail';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 import '../Heatmap/navbar.scss'
 import logo from '../Heatmap/staige_Logo.png'
 

@@ -13,8 +13,8 @@ export const filterData = (detectedObjects, filterFn) => {
   //Detect the values of x and y axis
   const coords = detectedObjects
     .filter(filterFn)
-    .map((ball) => ({ x: ball.top_view_position[0], y: ball.top_view_position[1] }));
-
+    .map((object) => ({ x: object.top_view_position[0], y: object.top_view_position[1],
+    timestamp: object.timestamp_ns }));
   //Number of appearances for each combination of  x & y asix
   const values = {};
   for (let data of coords) {
@@ -27,7 +27,7 @@ export const filterData = (detectedObjects, filterFn) => {
   const width = 1000;
   const height = 600;
   //Determining max value accordinh to the number of data fpr each catagory
-  var max = objectLenght > 100 ? 10 : objectLenght > 10 ? 5 : 1;
+  var max = objectLenght > 100 ? 2 : objectLenght > 10 ? 1 : 0;
   let min = 0;
 
   for (let element of coords) {
@@ -36,13 +36,18 @@ export const filterData = (detectedObjects, filterFn) => {
     element.value = value;
   }
   // heatmap data format, contains values for x,y & value
-  let elements = coords.map((elm) => ({ x: Math.floor(elm.x * width), y: Math.floor(elm.y * height), value: 1 }));
+  let elements = coords.map((elm) => ({
+    x: Math.floor(elm.x * width),
+    y: Math.floor(elm.y * height),
+    value: 1,
+    timestamp: elm.timestamp, // timestamp for checking which events should be show when running video
+  }));
 
   //Initializes a heatmap instance with a dataset. "min", "max", and "data" properties are required.
   return {
     data: elements,
-    min,
     max,
+    min
   };
 };
 
